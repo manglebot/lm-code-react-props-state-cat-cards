@@ -11,6 +11,7 @@ import cat9 from "../assets/images/cat9.jpg";
 import cat10 from "../assets/images/cat10.jpg";
 import cat11 from "../assets/images/cat11.jpg";
 import cat12 from "../assets/images/cat12.jpg";
+// import cat13 from "../assets/images/cat12.jpg";
 
 const images = [
   {
@@ -128,14 +129,16 @@ const CatCard: React.FC<CatCardProps> = (props) => {
     <div className="card">
       <h3 className="card__text card__header">{props.name}</h3>
       <p>
-        <CatImage
-          image={images[props.catIndex].image}
-          altText={images[props.catIndex].altText}
-          licenceType={images[props.catIndex].licenceType}
-          licenceUrl={images[props.catIndex].licenceUrl}
-          attributionName={images[props.catIndex].attributionName}
-          attributionUrl={images[props.catIndex].attributionUrl}
-        />
+        {props.catIndex < images.length && (
+          <CatImage
+            image={images[props.catIndex].image}
+            altText={images[props.catIndex].altText}
+            licenceType={images[props.catIndex].licenceType}
+            licenceUrl={images[props.catIndex].licenceUrl}
+            attributionName={images[props.catIndex].attributionName}
+            attributionUrl={images[props.catIndex].attributionUrl}
+          />
+        )}
       </p>
       <p className="card__text">Species: {props.species}</p>
       <p className="card__text">Favourite Food(s): {props.favFoods}</p>
