@@ -10,8 +10,8 @@ Let's create a new component for them. What props will our new component need? ð
 
 At the very least, we're going to need:
 
--   An image
--   Alt text so the image is accessible for people using screen readers
+- An image
+- Alt text so the image is accessible for people using screen readers
 
 There'll be some more later, but for now that'll get us started.
 
@@ -65,7 +65,7 @@ interface CatImageProps {
 }
 ```
 
-Don't forget to add these new properties to our `CatImage` components parameters too! 
+Don't forget to add these new properties to our `CatImage` components parameters too!
 
 We can display these props by adding some JSX under the `<img>` tag in `cat_image.tsx`:
 
@@ -225,7 +225,7 @@ Don't forget to add the `catIndex` to our cat card properties interface! (Hint: 
 Now each `CatCard` knows which image is correct, so we can pass the image props down to our `CatImage` component:
 
 ```JavaScript
-		<CatImage 
+		<CatImage
 			image={images[props.catIndex].image}
 			altText={images[props.catIndex].altText}
 			licenceType={images[props.catIndex].licenceType}
