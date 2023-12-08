@@ -86,13 +86,13 @@ export const catData: Cat[] = [
     birthYear: 2021,
     catIndex: 12,
   },
-  {
-    name: "Captain Catface",
-    species: "Sea Cattain",
-    favFoods: ["fish, rum"],
-    birthYear: 2016,
-    catIndex: 13,
-  },
+  //   {
+  //     name: "Captain Catface",
+  //     species: "Sea Cattain",
+  //     favFoods: ["fish, rum"],
+  //     birthYear: 2016,
+  //     catIndex: 13,
+  //   },
 ];
 catData.forEach((cat) => (cat.id = uuidv4()));
 console.log(catData); // each cat should now have a unique ID
