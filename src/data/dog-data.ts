@@ -27,3 +27,5 @@ export const dogData: Dog[] = [
     birthYear: 1715,
   },
 ];
+dogData.forEach((dog) => (dog.id = uuidv4()));
+export default dogData;
