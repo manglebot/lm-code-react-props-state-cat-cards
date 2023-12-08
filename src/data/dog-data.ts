@@ -4,13 +4,13 @@ import Dog from "./dog";
 export const dogData: Dog[] = [
   {
     name: "Floofus",
-    species: "Puppy",
+    species: "Dog",
     favFoods: ["Marshmallows"],
     birthYear: 2020,
   },
   {
     name: "Doofus",
-    species: "Doggo",
+    species: "Dog",
     favFoods: ["Porridge, Dog food"],
     birthYear: 2010,
   },

@@ -39,7 +39,7 @@ const images = [
   },
 ];
 
-interface dogCardProps {
+interface DogCardProps {
   id?: string;
   name: string;
   species: string;
@@ -48,7 +48,7 @@ interface dogCardProps {
   dogIndex: number;
 }
 
-const dogCard: React.FC<dogCardProps> = ({
+const DogCard: React.FC<DogCardProps> = ({
   name,
   species,
   favFoods,
@@ -77,4 +77,4 @@ const dogCard: React.FC<dogCardProps> = ({
   );
 };
 
-export default dogCard;
+export default DogCard;

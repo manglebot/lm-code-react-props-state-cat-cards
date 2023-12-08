@@ -1,4 +1,4 @@
-import CatImage from "./cat_image";
+import AnimalImage from "./animal_image";
 import cat1 from "../assets/images/cat1.jpg";
 import cat2 from "../assets/images/cat2.jpg";
 import cat3 from "../assets/images/cat3.jpg";
@@ -11,6 +11,10 @@ import cat9 from "../assets/images/cat9.jpg";
 import cat10 from "../assets/images/cat10.jpg";
 import cat11 from "../assets/images/cat11.jpg";
 import cat12 from "../assets/images/cat12.jpg";
+import dog1 from "../assets/images/dog1.jpg";
+import dog2 from "../assets/images/dog2.jpg";
+import dog3 from "../assets/images/dog3.jpg";
+import dog4 from "../assets/images/dog4.jpg";
 
 const images = [
   {
@@ -109,36 +113,68 @@ const images = [
     attributionName: "x-oph",
     attributionUrl: "https://www.flickr.com/people/x-oph/",
   },
+  {
+    image: dog1,
+    altText: "Describe this dog!",
+    licenceType: "CC0 License",
+    licenceUrl: "https://pixabay.com/service/license-summary/",
+    attributionName: "3194556",
+    attributionUrl: "https://pixabay.com/users/3194556",
+  },
+  {
+    image: dog2,
+    altText: "Describe this dog!",
+    licenceType: "CC0 License",
+    licenceUrl: "https://pixabay.com/service/license-summary/",
+    attributionName: "huoadg5888",
+    attributionUrl: "https://pixabay.com/users/huoadg5888",
+  },
+  {
+    image: dog3,
+    altText: "Describe this dog!",
+    licenceType: "CC0 License",
+    licenceUrl: "https://pixabay.com/service/license-summary/",
+    attributionName: "PicsbyFran",
+    attributionUrl: "https://pixabay.com/users/PicsbyFran",
+  },
+  {
+    image: dog4,
+    altText: "Describe this dog!",
+    licenceType: "CC0 License",
+    licenceUrl: "https://pixabay.com/service/license-summary/",
+    attributionName: "Vizslafotozas",
+    attributionUrl: "https://pixabay.com/users/vizslafotozas",
+  },
 ];
 
-interface CatCardProps {
+interface AnimalCardProps {
   id?: string;
   name: string;
   species: string;
   favFoods: Array<string>;
   birthYear: number;
-  catIndex: number;
+  animalIndex: number;
 }
 
-const CatCard: React.FC<CatCardProps> = ({
+const AnimalCard: React.FC<AnimalCardProps> = ({
   name,
   species,
   favFoods,
   birthYear,
-  catIndex,
+  animalIndex,
 }) => {
   return (
     <div className="card">
       <h3 className="card__text card__header">{name}</h3>
       <div>
-        {catIndex < images.length && (
-          <CatImage
-            image={images[catIndex].image}
-            altText={images[catIndex].altText}
-            licenceType={images[catIndex].licenceType}
-            licenceUrl={images[catIndex].licenceUrl}
-            attributionName={images[catIndex].attributionName}
-            attributionUrl={images[catIndex].attributionUrl}
+        {animalIndex < images.length && (
+          <AnimalImage
+            image={images[animalIndex].image}
+            altText={images[animalIndex].altText}
+            licenceType={images[animalIndex].licenceType}
+            licenceUrl={images[animalIndex].licenceUrl}
+            attributionName={images[animalIndex].attributionName}
+            attributionUrl={images[animalIndex].attributionUrl}
           />
         )}
       </div>
@@ -152,4 +188,4 @@ const CatCard: React.FC<CatCardProps> = ({
   );
 };
 
-export default CatCard;
+export default AnimalCard;
