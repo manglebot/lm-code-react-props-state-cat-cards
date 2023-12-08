@@ -144,7 +144,10 @@ const CatCard: React.FC<CatCardProps> = ({
         )}
       </div>
       <p className="card__text">Species: {species}</p>
-      <p className="card__text">Favourite Food(s): {favFoods}</p>
+      <p className="card__text">
+        Favourite Food(s):{" "}
+        {favFoods.map((food, index) => (index ? ", " : "") + food)}
+      </p>
       <p className="card__text">Birth Year: {birthYear}</p>
     </div>
   );
